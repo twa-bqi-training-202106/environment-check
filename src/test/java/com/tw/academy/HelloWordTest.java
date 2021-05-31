@@ -11,14 +11,14 @@ import static org.mockito.Mockito.mock;
 
 public class HelloWordTest {
     @Test
-    public void should_say_hello_world(){
+    public void should_say_hello_world() {
         HelloWorld helloWorld = new HelloWorld();
         String actual = helloWorld.say("World");
         assertThat(actual).isEqualTo("HelloWorld");
     }
 
     @Test
-    public void should_mock(){
+    public void should_mock() {
         HelloWorld helloWorld = mock(HelloWorld.class);
         given(helloWorld.say("World")).willReturn("HeHe");
         String actual = helloWorld.say("World");
@@ -31,6 +31,6 @@ public class HelloWordTest {
     public void should_value_source_work(String world) {
         HelloWorld helloWorld = new HelloWorld();
         String actual = helloWorld.say(world);
-        assertThat(actual).isEqualTo("Hello"+world);
+        assertThat(actual).isEqualTo("Hello" + world);
     }
 }
